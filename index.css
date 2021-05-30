@@ -1,17 +1,37 @@
-#grid {
-    display: grid;
-    grid-template-columns: 150px 1fr;
+* {
+    box-sizing: border-box;
 }
 
-a {
-margin: 0px;
-}
 
 body {
     background-color: rgb(82, 82, 82);
+    margin: 0;
 }
 
-header h1 {
+#grid {
+    display: grid;
+    grid-template-columns: 1fr 150px;
+    background-color: black;
+}
+
+a {
+    margin: 0px;
+    color: rgb(82, 82, 82);
+    text-decoration: none;
+}
+
+.film_title {
+    text-decoration: none;
+    color: rgb(82, 82, 82);
+    font-style: oblique;
+    font-size: 0.9rem;
+}
+
+h3 {
+    margin: 0;
+}
+
+h1 {
 color: rgb(0, 0, 0);
 text-decoration: none;
 font-size: 7rem;
@@ -20,19 +40,45 @@ border-bottom: solid 1px black;
 margin: 0;
 }
 
+/*flex box start*/
+
 article {
-    padding-left: 50px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
+
+article p, .film_image {
+    padding: 0;
+    margin: 0;
+}
+
+article h3, .film_title {
+    margin: 0;
+    
+}
+
+/*flex box end*/
 
 nav {
 border-right: solid 1px black;
+padding-top: 10px;
 }
 
 #grid ol {
-color: rgb(0, 0, 0);
-text-decoration: none;
-text-align: left;
-margin: 0;
-padding: 20px 30px 100px 20px;
-width: 100px;
+    margin: 0;
+    padding: 0;
+    width: 100px;
+}
+
+li {
+    margin-top: 10px;
+}
+
+@media(max-width:750px) {
+    nav {
+        display:none;
+    }
 }
